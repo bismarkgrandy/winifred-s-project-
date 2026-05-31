@@ -1,0 +1,190 @@
+/* Interview Setup Styles */
+
+.interview-setup-container {
+  @apply min-h-screen bg-[#0a0e27] text-white flex items-center justify-center py-8;
+}
+
+.interview-setup-wrapper {
+  @apply w-full max-w-4xl px-6;
+}
+
+/* Header */
+.interview-setup-header {
+  @apply mb-12 text-center;
+}
+
+.interview-setup-title {
+  @apply text-5xl font-bold text-[#22c55e] mb-4;
+}
+
+.interview-setup-subtitle {
+  @apply max-w-2xl mx-auto text-base leading-relaxed text-gray-400;
+}
+
+/* Main Card */
+.interview-setup-card {
+  @apply bg-[#111d3b] border border-[#1e2d4a] rounded-2xl p-8;
+}
+
+/* Form Row */
+.interview-setup-row {
+  @apply grid grid-cols-2 gap-6 mb-8;
+}
+
+/* Field */
+.interview-setup-field {
+  @apply flex flex-col;
+}
+
+.interview-setup-label {
+  @apply mb-3 text-xs font-bold tracking-widest text-gray-500 uppercase;
+}
+
+/* Select Dropdown */
+.interview-setup-select-wrapper {
+  @apply relative;
+}
+
+.interview-setup-select {
+  @apply w-full bg-[#0a0e27] border border-[#1e2d4a] rounded-lg px-4 py-3 text-white appearance-none cursor-pointer focus:outline-none focus:border-[#22c55e] transition-colors;
+}
+
+.interview-setup-select-icon {
+  @apply absolute w-5 h-5 text-gray-400 transform -translate-y-1/2 pointer-events-none right-3 top-1/2;
+}
+
+/* Interview Type Section */
+.interview-setup-type-section {
+  @apply mb-8;
+}
+
+.interview-setup-type-grid {
+  @apply grid grid-cols-2 gap-4;
+}
+
+.interview-setup-type-option {
+  @apply relative cursor-pointer;
+}
+
+.interview-setup-type-radio {
+  @apply absolute w-full h-full opacity-0 cursor-pointer;
+}
+
+.interview-setup-type-option-content {
+  @apply border-2 border-[#1e2d4a] rounded-xl p-5 flex items-start gap-4 transition-all duration-200;
+}
+
+.interview-setup-type-option:has(input:checked) .interview-setup-type-option-content {
+  @apply border-[#22c55e] bg-[#0a1a2e];
+}
+
+.interview-setup-type-option:hover .interview-setup-type-option-content {
+  @apply border-[#22c55e]/50;
+}
+
+.interview-setup-type-content {
+  @apply flex items-start gap-4;
+}
+
+.interview-setup-type-icon {
+  @apply w-6 h-6 text-[#22c55e] flex-shrink-0 mt-0.5;
+}
+
+.interview-setup-type-text {
+  @apply flex-1;
+}
+
+.interview-setup-type-title {
+  @apply mb-1 text-lg font-bold text-white;
+}
+
+.interview-setup-type-description {
+  @apply text-sm text-gray-400;
+}
+
+/* Skills Section */
+.interview-setup-skills-section {
+  @apply mb-8;
+}
+
+.interview-setup-input-wrapper {
+  @apply relative flex items-center mb-4;
+}
+
+.interview-setup-input-icon {
+  @apply absolute left-3 w-5 h-5 text-[#22c55e];
+}
+
+.interview-setup-input {
+  @apply w-full bg-[#0a0e27] border border-[#1e2d4a] rounded-lg pl-10 pr-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-[#22c55e] transition-colors;
+}
+
+.interview-setup-tags {
+  @apply flex flex-wrap gap-2;
+}
+
+.interview-setup-tag {
+  @apply inline-flex items-center gap-2 bg-[#0a0e27] border border-[#1e2d4a] rounded-full px-3 py-1.5 text-sm text-gray-300;
+}
+
+.interview-setup-tag-remove {
+  @apply ml-1 text-gray-500 hover:text-[#22c55e] transition-colors cursor-pointer flex items-center;
+}
+
+/* Button */
+.interview-setup-button {
+  @apply w-full bg-[#22c55e] hover:bg-[#16a34a] text-black font-bold text-base py-3 rounded-lg transition-all duration-200 mb-4 flex items-center justify-center gap-2 uppercase tracking-wide;
+}
+
+.interview-setup-button-arrow {
+  @apply ml-1;
+}
+
+/* Duration */
+.interview-setup-duration {
+  @apply text-xs font-bold tracking-widest text-center text-gray-500 uppercase;
+}
+
+/* Footer */
+.interview-setup-footer {
+  @apply flex items-center justify-between pb-6 mt-12;
+}
+
+.interview-setup-footer-left {
+  @apply flex items-center;
+}
+
+.interview-setup-logo {
+  @apply flex items-center gap-2 text-sm font-semibold text-white;
+}
+
+.interview-setup-logo-icon {
+  @apply w-6 h-6 rounded-full bg-[#22c55e] text-black flex items-center justify-center font-bold text-xs;
+}
+
+.interview-setup-footer-text {
+  @apply text-xs text-gray-500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .interview-setup-row {
+    @apply grid-cols-1;
+  }
+
+  .interview-setup-type-grid {
+    @apply grid-cols-1;
+  }
+
+  .interview-setup-title {
+    @apply text-3xl;
+  }
+
+  .interview-setup-card {
+    @apply p-6;
+  }
+
+  .interview-setup-footer {
+    @apply flex-col items-start gap-4;
+  }
+}

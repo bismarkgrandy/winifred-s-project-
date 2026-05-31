@@ -1,0 +1,219 @@
+/* Base page */
+.page-wrapper {
+  @apply flex flex-col min-h-screen;
+  background-color: #071c2c;
+  color: #e2e8f0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  @apply flex items-center justify-between px-8 py-4;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.brand {
+  @apply text-lg font-semibold tracking-wide text-white;
+}
+
+.brand-ai {
+  @apply ml-1 font-light text-white;
+}
+
+.nav-right {
+  @apply flex items-center gap-4;
+}
+
+.nav-text {
+  @apply text-sm;
+  color: #94a3b8;
+}
+
+.signup-btn {
+  @apply px-5 py-2 text-sm font-semibold transition-all duration-200 border rounded-lg;
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  background: transparent;
+}
+
+.signup-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Main content */
+.main-content {
+  @apply flex flex-col items-center justify-center flex-1 px-4 py-12;
+}
+
+/* Icon */
+.icon-wrapper {
+  @apply flex items-center justify-center mb-6 w-14 h-14 rounded-2xl;
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  box-shadow: 0 8px 24px rgba(22, 163, 74, 0.3);
+}
+
+/* Heading */
+.heading {
+  @apply mb-3 text-4xl font-bold text-center;
+  color: #22c55e;
+}
+
+.subheading {
+  @apply mb-8 text-base text-center;
+  color: #94a3b8;
+}
+
+/* Card */
+.card {
+  @apply flex flex-col w-full max-w-md gap-5 p-8 rounded-2xl;
+  background-color: #0d2535;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Field */
+.field-group {
+  @apply flex flex-col gap-2;
+}
+
+.field-label {
+  @apply text-xs font-semibold tracking-widest;
+  color: #22c55e;
+}
+
+.field-label-row {
+  @apply flex items-center justify-between;
+}
+
+.forgot-link {
+  @apply text-xs font-medium transition-colors duration-200;
+  color: #22c55e;
+}
+
+.forgot-link:hover {
+  color: #4ade80;
+}
+
+/* Input */
+.input-wrapper {
+  @apply flex items-center gap-3 px-4 py-3 rounded-xl;
+  background-color: #0a1e2e;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: border-color 0.2s;
+}
+
+.input-wrapper:focus-within {
+  border-color: rgba(34, 197, 94, 0.5);
+}
+
+.input-icon {
+  color: #475569;
+  flex-shrink: 0;
+}
+
+.field-input {
+  @apply flex-1 text-sm bg-transparent outline-none;
+  color: #e2e8f0;
+}
+
+.field-input::placeholder {
+  color: #475569;
+}
+
+/* Sign In Button */
+.signin-btn {
+  @apply w-full flex items-center justify-center gap-2 py-3.5 rounded-xl text-white font-semibold text-sm transition-all duration-200 mt-1;
+  background: linear-gradient(135deg, #16a34a, #15803d);
+  box-shadow: 0 4px 20px rgba(22, 163, 74, 0.35);
+}
+
+.signin-btn:hover {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  box-shadow: 0 6px 28px rgba(22, 163, 74, 0.5);
+  transform: translateY(-1px);
+}
+
+/* Divider */
+.divider {
+  @apply flex items-center gap-3;
+}
+
+.divider-line {
+  @apply flex-1 h-px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.divider-text {
+  @apply text-xs font-medium tracking-widest whitespace-nowrap;
+  color: #475569;
+}
+
+/* Google Button */
+.google-btn {
+  @apply w-full flex items-center justify-center gap-3 py-3.5 rounded-xl text-sm font-medium transition-all duration-200;
+  background-color: #0a1e2e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0;
+}
+
+.google-btn:hover {
+  background-color: #0f2840;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.google-icon {
+  @apply flex items-center justify-center w-5 h-5 text-xs font-bold text-white rounded;
+  background: #ea4335;
+}
+
+/* Bottom text */
+.bottom-text {
+  @apply mt-6 text-sm;
+  color: #94a3b8;
+}
+
+.bottom-link {
+  @apply font-semibold transition-colors duration-200;
+  color: #22c55e;
+}
+
+.bottom-link:hover {
+  color: #4ade80;
+}
+
+/* Footer */
+.footer {
+  @apply flex flex-wrap items-center justify-between gap-4 px-8 py-6;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-brand {
+  @apply text-sm;
+}
+
+.footer-brand-name {
+  @apply font-semibold;
+  color: #e2e8f0;
+}
+
+.footer-brand-sub {
+  color: #64748b;
+}
+
+.footer-links {
+  @apply flex items-center gap-6;
+}
+
+.footer-link {
+  @apply text-sm transition-colors duration-200;
+  color: #64748b;
+}
+
+.footer-link:hover {
+  color: #94a3b8;
+}
+
+.footer-copy {
+  @apply text-sm;
+  color: #64748b;
+}

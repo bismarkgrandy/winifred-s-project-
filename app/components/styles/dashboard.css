@@ -1,0 +1,380 @@
+/* Dashboard Root */
+.dashboard-root {
+  @apply min-h-screen bg-[#0a0f1a] text-white font-sans;
+}
+
+/* Navbar */
+.dashboard-navbar {
+  @apply bg-[#0d1a14] border-b border-[#1a2e20] px-6 py-3 flex items-center justify-between sticky top-0 z-50;
+}
+
+.dashboard-navbar-left {
+  @apply flex items-center;
+}
+
+.dashboard-logo {
+  @apply text-white font-bold text-lg tracking-tight;
+}
+
+.dashboard-logo-accent {
+  @apply text-[#22c55e];
+}
+
+.dashboard-nav-menu {
+  @apply flex items-center gap-8 text-sm;
+}
+
+.dashboard-nav-link {
+  @apply text-gray-400 hover:text-white transition-colors;
+}
+
+.dashboard-nav-active {
+  @apply text-[#22c55e] font-medium border-b-2 border-[#22c55e] pb-0.5;
+}
+
+.dashboard-navbar-right {
+  @apply flex items-center gap-3;
+}
+
+.dashboard-search-box {
+  @apply flex items-center bg-[#111827] border border-[#1f2d3d] rounded-lg px-3 py-1.5 gap-2 w-48;
+}
+
+.dashboard-search-icon {
+  @apply w-3.5 h-3.5 text-gray-500;
+}
+
+.dashboard-search-input {
+  @apply bg-transparent text-sm text-gray-400 placeholder-gray-600 outline-none w-full;
+}
+
+.dashboard-navbar-icon-btn {
+  @apply text-gray-400 hover:text-white transition-colors cursor-pointer;
+}
+
+.dashboard-user-avatar {
+  @apply w-8 h-8 rounded-full bg-amber-200 flex items-center justify-center text-amber-800 text-xs font-bold;
+}
+
+/* Hero Section */
+.dashboard-hero {
+  @apply bg-[#0a0f1a] px-8 py-16 relative overflow-hidden;
+}
+
+.dashboard-hero-content {
+  @apply max-w-6xl mx-auto flex items-center justify-between;
+}
+
+.dashboard-hero-left {
+  @apply max-w-xl;
+}
+
+.dashboard-badge {
+  @apply inline-flex items-center gap-2 bg-[#0d2a1a] border border-[#1a4a2e] rounded-full px-3 py-1 mb-6;
+}
+
+.dashboard-badge-icon {
+  @apply text-[#22c55e] text-xs font-bold;
+}
+
+.dashboard-badge-text {
+  @apply text-[#22c55e] text-xs font-semibold tracking-widest uppercase;
+}
+
+.dashboard-hero-title {
+  @apply text-5xl font-extrabold leading-tight mb-5;
+}
+
+.dashboard-title-accent {
+  @apply text-[#22c55e];
+}
+
+.dashboard-title-white {
+  @apply text-white;
+}
+
+.dashboard-hero-subtitle {
+  @apply text-gray-400 text-base leading-relaxed mb-8 max-w-md;
+}
+
+.dashboard-hero-buttons {
+  @apply flex items-center gap-4;
+}
+
+.dashboard-btn-primary {
+  @apply flex items-center gap-2 bg-[#22c55e] hover:bg-[#16a34a] text-black font-bold px-6 py-3 rounded-lg transition-all duration-200 hover:scale-105 active:scale-95;
+}
+
+.dashboard-btn-secondary {
+  @apply px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-400 hover:bg-white/5 transition-all duration-200;
+}
+
+/* Robot Container */
+.dashboard-robot-container {
+  @apply hidden lg:flex items-center justify-center relative w-72 h-80;
+}
+
+.dashboard-robot {
+  @apply relative flex flex-col items-center;
+}
+
+.dashboard-robot-head {
+  @apply w-56 h-52 bg-gradient-to-b from-[#1a2535] to-[#0f1a28] rounded-[2rem] border border-[#253545] shadow-2xl flex flex-col items-center justify-center gap-4 relative;
+}
+
+.dashboard-robot-top-bumps {
+  @apply absolute -top-5 flex gap-8;
+}
+
+.dashboard-robot-bump {
+  @apply w-3 h-5 bg-[#1a2535] rounded-t-full border border-[#253545];
+}
+
+.dashboard-robot-eyes {
+  @apply flex gap-5;
+}
+
+.dashboard-robot-eye {
+  @apply w-11 h-8 bg-[#080e18] rounded-md border border-[#253545];
+}
+
+.dashboard-robot-mouth {
+  @apply flex gap-1.5;
+}
+
+.dashboard-robot-mouth-bar {
+  @apply w-1.5 h-5 bg-[#1e2d3d] rounded-sm;
+}
+
+.dashboard-robot-neck {
+  @apply w-14 h-8 bg-[#0f1a28] border-x border-[#1a2535];
+}
+
+.dashboard-robot-shoulders {
+  @apply w-52 h-5 bg-gradient-to-b from-[#0f1a28] to-transparent rounded-b-[3rem] border-x border-b border-[#1a2535];
+}
+
+/* Stats Section */
+.dashboard-stats {
+  @apply px-8 pb-6 max-w-6xl mx-auto;
+}
+
+.dashboard-stats-grid {
+  @apply grid grid-cols-3 gap-4;
+}
+
+.dashboard-stat-card {
+  @apply bg-[#0d1520] border border-[#1a2535] rounded-xl p-5;
+}
+
+.dashboard-stat-header {
+  @apply flex items-center justify-between mb-4;
+}
+
+.dashboard-stat-icon {
+  @apply w-9 h-9 rounded-lg border flex items-center justify-center;
+}
+
+.dashboard-stat-icon-green {
+  @apply bg-[#0a3a2a] border-[#1a5a3a];
+}
+
+.dashboard-stat-icon-green svg {
+  @apply text-[#22c55e];
+}
+
+.dashboard-stat-icon-gold {
+  @apply bg-[#2a1a00] border-[#4a3000];
+}
+
+.dashboard-stat-icon-gold svg {
+  @apply text-amber-400;
+}
+
+.dashboard-stat-label {
+  @apply text-[10px] font-bold tracking-widest text-gray-500 uppercase;
+}
+
+.dashboard-stat-value {
+  @apply text-4xl font-extrabold text-white mb-2;
+}
+
+.dashboard-stat-meta {
+  @apply flex items-center gap-1 text-[#22c55e] text-xs font-semibold;
+}
+
+.dashboard-stat-bar {
+  @apply w-full h-1.5 bg-[#1a2535] rounded-full overflow-hidden;
+}
+
+.dashboard-stat-bar-fill {
+  @apply h-full bg-gradient-to-r from-[#22c55e] to-[#16a34a] rounded-full;
+}
+
+.dashboard-stat-bracket {
+  @apply text-amber-400 text-xs font-semibold;
+}
+
+/* Interviews Section */
+.dashboard-interviews {
+  @apply px-8 py-6 max-w-6xl mx-auto;
+}
+
+.dashboard-interviews-header {
+  @apply flex items-start justify-between mb-6;
+}
+
+.dashboard-section-title {
+  @apply text-xl font-bold text-white mb-1;
+}
+
+.dashboard-section-subtitle {
+  @apply text-gray-500 text-sm;
+}
+
+.dashboard-filter-buttons {
+  @apply flex gap-2;
+}
+
+.dashboard-filter-btn {
+  @apply w-9 h-9 rounded-lg bg-[#0d1520] border border-[#1a2535] flex items-center justify-center text-gray-400 hover:text-white hover:border-gray-500 transition-colors cursor-pointer;
+}
+
+.dashboard-interviews-grid {
+  @apply grid grid-cols-3 gap-4;
+}
+
+.dashboard-interview-card {
+  @apply bg-[#0d1520] border border-[#1a2535] rounded-xl p-5 flex flex-col;
+}
+
+.dashboard-card-header {
+  @apply flex items-center justify-between mb-5;
+}
+
+.dashboard-card-icon {
+  @apply w-10 h-10 rounded-xl border flex items-center justify-center;
+}
+
+.dashboard-card-icon-green {
+  @apply bg-[#0a3a2a] border-[#1a5a3a];
+}
+
+.dashboard-card-icon-green svg {
+  @apply text-[#22c55e];
+}
+
+.dashboard-card-icon-blue {
+  @apply bg-[#0a1a3a] border-[#1a2a5a];
+}
+
+.dashboard-card-icon-blue svg {
+  @apply text-blue-400;
+}
+
+.dashboard-card-icon-gold {
+  @apply bg-[#1a2210] border-[#2a3a18];
+}
+
+.dashboard-card-icon-gold svg {
+  @apply text-amber-400;
+}
+
+.dashboard-card-score {
+  @apply text-right;
+}
+
+.dashboard-card-score-label {
+  @apply text-[10px] text-gray-500 uppercase tracking-widest font-bold block mb-0.5;
+}
+
+.dashboard-card-score-value {
+  @apply text-xl font-extrabold block;
+}
+
+.dashboard-card-score-green {
+  @apply text-[#22c55e];
+}
+
+.dashboard-card-score-gray {
+  @apply text-gray-500;
+}
+
+.dashboard-card-title {
+  @apply text-base font-bold text-white;
+}
+
+.dashboard-card-company {
+  @apply flex items-center gap-1 text-gray-500 text-xs mt-0.5 mb-4;
+}
+
+.dashboard-card-footer {
+  @apply flex items-center justify-between mt-auto pt-4 border-t border-[#1a2535] mb-4;
+}
+
+.dashboard-card-date {
+  @apply flex items-center gap-1 text-gray-500 text-xs;
+}
+
+.dashboard-card-ai-badge {
+  @apply flex items-center gap-1 bg-[#0a3a2a] border border-[#1a5a3a] rounded-full px-2 py-0.5;
+}
+
+.dashboard-card-ai-badge span {
+  @apply text-[10px] font-bold text-[#22c55e];
+}
+
+.dashboard-card-ai-dot {
+  @apply w-3.5 h-3.5 rounded-full bg-[#22c55e] flex items-center justify-center;
+}
+
+.dashboard-card-ai-dot::after {
+  content: '✓';
+  @apply text-black text-[8px] font-bold;
+}
+
+.dashboard-card-status {
+  @apply text-[10px] font-bold text-amber-400 bg-amber-400/10 border border-amber-400/20 rounded-full px-2.5 py-0.5 uppercase tracking-widest;
+}
+
+.dashboard-card-btn {
+  @apply w-full bg-[#111827] hover:bg-[#1a2535] border border-[#1a2535] hover:border-[#2a3a4a] text-white text-sm font-semibold py-2.5 rounded-lg transition-all duration-200;
+}
+
+.dashboard-card-btn-primary {
+  @apply bg-[#22c55e] hover:bg-[#16a34a] text-black;
+}
+
+/* FAB */
+.dashboard-fab {
+  @apply fixed bottom-6 right-6 w-12 h-12 bg-[#22c55e] hover:bg-[#16a34a] text-black rounded-full flex items-center justify-center shadow-lg shadow-[#22c55e]/20 hover:scale-110 transition-all duration-200 z-50 cursor-pointer;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .dashboard-hero-content {
+    @apply flex-col gap-8;
+  }
+
+  .dashboard-robot-container {
+    @apply flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-stats-grid {
+    @apply grid-cols-1;
+  }
+
+  .dashboard-interviews-grid {
+    @apply grid-cols-1;
+  }
+
+  .dashboard-hero-title {
+    @apply text-3xl;
+  }
+
+  .dashboard-nav-menu {
+    @apply hidden;
+  }
+}

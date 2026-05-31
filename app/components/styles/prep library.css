@@ -1,0 +1,293 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  button {
+    @apply transition-all duration-200;
+  }
+
+  input {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-semibold transition-colors;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white rounded-lg font-semibold transition-colors;
+  }
+
+  .btn-ghost {
+    @apply px-6 py-3 bg-transparent border border-slate-800 hover:border-slate-700 text-white rounded-lg font-semibold transition-colors;
+  }
+
+  /* Cards */
+  .card-base {
+    @apply bg-slate-900 border border-slate-800 rounded-xl transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply hover:border-slate-700 hover:shadow-lg hover:shadow-emerald-500/10;
+  }
+
+  .card-lg {
+    @apply p-8;
+  }
+
+  .card-md {
+    @apply p-6;
+  }
+
+  /* Icons */
+  .icon-box {
+    @apply w-12 h-12 rounded-lg flex items-center justify-center;
+  }
+
+  .icon-box-sm {
+    @apply w-10 h-10 rounded-lg flex items-center justify-center;
+  }
+
+  .icon-emerald {
+    @apply bg-emerald-500/20;
+  }
+
+  .icon-blue {
+    @apply bg-blue-600/20;
+  }
+
+  .icon-red {
+    @apply bg-red-600/20;
+  }
+
+  .icon-purple {
+    @apply bg-purple-600/20;
+  }
+
+  /* Headers */
+  .header-xl {
+    @apply text-5xl font-bold text-white;
+  }
+
+  .header-lg {
+    @apply text-3xl font-bold text-white;
+  }
+
+  .header-md {
+    @apply text-xl font-bold text-emerald-400;
+  }
+
+  .header-sm {
+    @apply text-sm font-semibold text-white;
+  }
+
+  /* Text */
+  .text-muted {
+    @apply text-slate-400;
+  }
+
+  .text-muted-sm {
+    @apply text-slate-600 text-xs;
+  }
+
+  .text-accent {
+    @apply text-emerald-400;
+  }
+
+  .text-accent-hover {
+    @apply text-emerald-400 hover:text-emerald-300 transition-colors;
+  }
+
+  /* Badges */
+  .badge-base {
+    @apply text-xs font-bold px-3 py-1 rounded;
+  }
+
+  .badge-hard {
+    @apply badge-base text-red-400 bg-red-500/10;
+  }
+
+  .badge-medium {
+    @apply badge-base text-blue-400 bg-blue-500/10;
+  }
+
+  .badge-expert {
+    @apply badge-base text-purple-400 bg-purple-500/10;
+  }
+
+  .badge-questions {
+    @apply badge-base bg-emerald-600 text-white;
+  }
+
+  .badge-category {
+    @apply text-xs font-bold px-3 py-1 rounded bg-slate-800 text-slate-600 group-hover:bg-slate-700 transition-colors;
+  }
+
+  /* Section Dividers */
+  .section-divider {
+    @apply w-1 h-8 bg-emerald-400;
+  }
+
+  /* Borders */
+  .border-dark {
+    @apply border-slate-800;
+  }
+
+  .border-dark-light {
+    @apply border-slate-700;
+  }
+
+  .border-accent {
+    @apply border-emerald-600/30;
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply text-slate-400 hover:text-white transition-colors text-sm;
+  }
+
+  .nav-link-active {
+    @apply text-emerald-400 font-semibold text-sm;
+  }
+
+  /* Search */
+  .search-input {
+    @apply pl-10 pr-4 py-2 bg-slate-900 border border-slate-800 rounded-lg text-sm text-white placeholder-slate-600 focus:outline-none focus:border-emerald-600 transition-colors;
+  }
+
+  /* Feature Cards */
+  .feature-card {
+    @apply bg-slate-900 border border-slate-800 rounded-xl p-8 hover:border-slate-700 transition-all;
+  }
+
+  .feature-card-sm {
+    @apply bg-slate-900 border border-slate-800 rounded-xl p-6 hover:border-slate-700 transition-all group cursor-pointer;
+  }
+
+  /* Grid Images */
+  .card-image {
+    @apply h-40 bg-gradient-to-br from-slate-800 to-slate-900 relative overflow-hidden;
+  }
+
+  .card-image-hover {
+    @apply opacity-40 group-hover:opacity-60 transition-opacity;
+  }
+
+  /* Pill Buttons */
+  .pill-btn {
+    @apply flex items-center gap-2 px-6 py-3 rounded-full transition-colors;
+  }
+
+  .pill-btn-accent {
+    @apply pill-btn bg-slate-900 border border-emerald-600/30 text-emerald-400 hover:bg-slate-800;
+  }
+
+  .pill-btn-secondary {
+    @apply pill-btn bg-slate-900 border border-slate-800 text-slate-300 hover:bg-slate-800;
+  }
+
+  /* Status Indicator */
+  .status-dot {
+    @apply w-2 h-2 rounded-full bg-emerald-400;
+  }
+
+  .status-ring {
+    @apply w-5 h-5 rounded-full border border-emerald-400 flex items-center justify-center;
+  }
+
+  /* Header */
+  .header-sticky {
+    @apply border-b border-slate-800 bg-slate-950/50 backdrop-blur sticky top-0 z-50;
+  }
+
+  /* Main Content */
+  .container-main {
+    @apply max-w-7xl mx-auto px-6 py-12;
+  }
+
+  /* Section Spacing */
+  .section-mb {
+    @apply mb-16;
+  }
+
+  .section-mb-sm {
+    @apply mb-8;
+  }
+
+  /* Gradients */
+  .gradient-emerald {
+    @apply from-emerald-500 to-emerald-600;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950;
+  }
+
+  /* Transitions */
+  .transition-smooth {
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  /* Avatar */
+  .avatar-sm {
+    @apply w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold;
+  }
+
+  .avatar-gradient {
+    @apply bg-gradient-to-br from-emerald-400 to-blue-500;
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .gap-sm {
+    @apply gap-2;
+  }
+
+  .gap-md {
+    @apply gap-4;
+  }
+
+  .gap-lg {
+    @apply gap-6;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .shadow-emerald {
+    @apply shadow-lg shadow-emerald-500/10;
+  }
+
+  .backdrop-blur-md {
+    @apply backdrop-blur-md;
+  }
+}

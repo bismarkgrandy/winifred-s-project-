@@ -1,0 +1,757 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+
+* {
+  @apply m-0 p-0 box-border;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply font-sans antialiased;
+  background: linear-gradient(to bottom, #0f172a, #0f1729, #0f172a);
+  color: #e2e8f0;
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+
+::-webkit-scrollbar {
+  @apply w-2.5 h-2.5;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-900/50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-600 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-500;
+}
+
+/* ============================================
+   TEXT SELECTION
+   ============================================ */
+
+::selection {
+  @apply bg-emerald-500 text-white;
+}
+
+::-moz-selection {
+  @apply bg-emerald-500 text-white;
+}
+
+/* ============================================
+   FOCUS STATES
+   ============================================ */
+
+:focus-visible {
+  @apply outline-2 outline-emerald-500 outline-offset-2;
+}
+
+/* ============================================
+   LINKS
+   ============================================ */
+
+a {
+  @apply no-underline transition-colors duration-300;
+}
+
+a:hover {
+  @apply text-emerald-500;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+button {
+  @apply font-inherit cursor-pointer border-none transition-all duration-300;
+}
+
+button:active {
+  @apply scale-95;
+}
+
+/* ============================================
+   INPUTS
+   ============================================ */
+
+input,
+select {
+  @apply font-inherit;
+}
+
+input::placeholder {
+  @apply text-slate-400;
+}
+
+select {
+  @apply cursor-pointer;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+header {
+  @apply shadow-sm sticky top-0 z-50;
+}
+
+/* ============================================
+   CUSTOM COMPONENT CLASSES
+   ============================================ */
+
+/* Gradients */
+.bg-gradient-dark {
+  @apply bg-gradient-to-br from-slate-800 to-slate-900;
+}
+
+.bg-gradient-card {
+  @apply bg-gradient-to-br from-slate-800 to-slate-900;
+}
+
+.bg-gradient-slate {
+  @apply bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950;
+}
+
+/* Cards & Containers */
+.card {
+  @apply bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-xl p-6 transition-all duration-300;
+}
+
+.card:hover {
+  @apply border-slate-600;
+}
+
+.card-lg {
+  @apply p-8 rounded-2xl;
+}
+
+.card-sm {
+  @apply p-4 rounded-lg;
+}
+
+/* Progress Bars */
+.progress-bar {
+  @apply h-0.5 bg-slate-700 rounded-full overflow-hidden;
+}
+
+.progress-fill {
+  @apply h-full bg-emerald-400 transition-all duration-300;
+}
+
+.progress-fill-high {
+  @apply w-2/3;
+}
+
+.progress-fill-medium {
+  @apply w-1/2;
+}
+
+.progress-fill-low {
+  @apply w-1/4;
+}
+
+/* Badges */
+.badge {
+  @apply inline-block px-3 py-1 rounded-full text-xs font-bold transition-all duration-300;
+}
+
+.badge-primary {
+  @apply bg-emerald-500/20 text-emerald-400;
+}
+
+.badge-secondary {
+  @apply bg-slate-700 text-slate-300;
+}
+
+.badge-hard {
+  @apply bg-red-500/20 text-red-400;
+}
+
+.badge-medium {
+  @apply bg-yellow-500/20 text-yellow-400;
+}
+
+.badge-easy {
+  @apply bg-emerald-500/20 text-emerald-400;
+}
+
+.badge-large {
+  @apply px-4 py-2 text-sm;
+}
+
+/* Buttons */
+.btn {
+  @apply px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 border-none cursor-pointer inline-flex items-center justify-center gap-2;
+}
+
+.btn-sm {
+  @apply px-3 py-1.5 text-xs;
+}
+
+.btn-md {
+  @apply px-4 py-2 text-sm;
+}
+
+.btn-lg {
+  @apply px-6 py-3 text-base;
+}
+
+.btn-primary {
+  @apply bg-emerald-500 text-white hover:bg-emerald-600 hover:-translate-y-0.5 active:translate-y-0;
+}
+
+.btn-secondary {
+  @apply bg-slate-700 text-slate-200 hover:bg-slate-600 hover:-translate-y-0.5 active:translate-y-0;
+}
+
+.btn-dark {
+  @apply bg-slate-800 text-white border border-slate-700 hover:bg-slate-700 hover:border-slate-600;
+}
+
+.btn-white {
+  @apply bg-white text-slate-900 font-bold hover:bg-slate-100;
+}
+
+/* Navigation */
+.nav-link {
+  @apply text-sm text-slate-400 transition-colors duration-300 hover:text-white;
+}
+
+.nav-link-active {
+  @apply text-emerald-500 border-b-2 border-emerald-500 pb-1;
+}
+
+/* Tags */
+.tag {
+  @apply inline-block px-3 py-0.5 bg-slate-700/50 text-slate-300 rounded-full text-xs transition-all duration-300 hover:bg-slate-700 hover:text-slate-100;
+}
+
+/* Icons */
+.icon {
+  @apply w-5 h-5;
+}
+
+.icon-sm {
+  @apply w-4 h-4;
+}
+
+.icon-lg {
+  @apply w-6 h-6;
+}
+
+.icon-xl {
+  @apply w-8 h-8;
+}
+
+.icon-emerald {
+  @apply text-emerald-500;
+}
+
+.icon-white {
+  @apply text-white;
+}
+
+.icon-slate {
+  @apply text-slate-400;
+}
+
+/* Transitions */
+.transition-all {
+  @apply transition-all duration-300 ease-out;
+}
+
+.transition-colors {
+  @apply transition-colors duration-300 ease-out;
+}
+
+.transition-transform {
+  @apply transition-transform duration-300 ease-out;
+}
+
+.transition-opacity {
+  @apply transition-opacity duration-300 ease-out;
+}
+
+/* Hover Effects */
+.hover-lift:hover {
+  @apply -translate-y-1;
+}
+
+.hover-glow:hover {
+  @apply shadow-glow;
+}
+
+/* Containers */
+.container-max {
+  @apply max-w-7xl mx-auto px-6;
+}
+
+.container-sm {
+  @apply max-w-3xl mx-auto;
+}
+
+.container-md {
+  @apply max-w-4xl mx-auto;
+}
+
+.container-lg {
+  @apply max-w-5xl mx-auto;
+}
+
+.container-xl {
+  @apply max-w-7xl mx-auto;
+}
+
+/* Grid */
+.grid-cols-auto {
+  @apply grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))];
+}
+
+.gap-sm {
+  @apply gap-2;
+}
+
+.gap-md {
+  @apply gap-4;
+}
+
+.gap-lg {
+  @apply gap-6;
+}
+
+.gap-xl {
+  @apply gap-8;
+}
+
+/* Spacing */
+.p-sm {
+  @apply p-2;
+}
+
+.p-md {
+  @apply p-4;
+}
+
+.p-lg {
+  @apply p-6;
+}
+
+.p-xl {
+  @apply p-8;
+}
+
+.px-sm {
+  @apply px-2;
+}
+
+.px-md {
+  @apply px-4;
+}
+
+.px-lg {
+  @apply px-6;
+}
+
+.py-sm {
+  @apply py-2;
+}
+
+.py-md {
+  @apply py-4;
+}
+
+.py-lg {
+  @apply py-6;
+}
+
+/* Typography */
+.text-heading-xl {
+  @apply text-4xl font-bold leading-tight tracking-tight;
+}
+
+.text-heading-lg {
+  @apply text-3xl font-bold leading-snug;
+}
+
+.text-heading-md {
+  @apply text-2xl font-bold leading-snug;
+}
+
+.text-heading-sm {
+  @apply text-xl font-semibold leading-normal;
+}
+
+.text-heading-xs {
+  @apply text-lg font-semibold leading-normal;
+}
+
+.text-body-lg {
+  @apply text-base font-normal leading-relaxed;
+}
+
+.text-body-md {
+  @apply text-sm font-normal leading-relaxed;
+}
+
+.text-body-sm {
+  @apply text-xs font-normal leading-relaxed;
+}
+
+.text-body-xs {
+  @apply text-xs font-normal leading-snug;
+}
+
+.text-caption {
+  @apply text-xs font-medium leading-tight tracking-wider;
+}
+
+.font-bold {
+  @apply font-bold;
+}
+
+.font-semibold {
+  @apply font-semibold;
+}
+
+.font-medium {
+  @apply font-medium;
+}
+
+.font-normal {
+  @apply font-normal;
+}
+
+/* Display */
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-between {
+  @apply flex items-center justify-between;
+}
+
+.flex-col-center {
+  @apply flex flex-col items-center justify-center;
+}
+
+/* Visibility */
+.hidden-mobile {
+  @apply hidden md:block;
+}
+
+.hidden-desktop {
+  @apply md:hidden;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    @apply opacity-0;
+  }
+  to {
+    @apply opacity-100;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    @apply opacity-0 -translate-y-2.5;
+  }
+  to {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    @apply opacity-0 translate-y-2.5;
+  }
+  to {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    @apply opacity-0 translate-x-2.5;
+  }
+  to {
+    @apply opacity-100 translate-x-0;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    @apply opacity-0 -translate-x-2.5;
+  }
+  to {
+    @apply opacity-100 translate-x-0;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    @apply opacity-100;
+  }
+  50% {
+    @apply opacity-50;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    @apply translate-y-0;
+  }
+  50% {
+    @apply -translate-y-1.25;
+  }
+}
+
+.animate-fade-in {
+  @apply animate-fadeIn;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-slide-left {
+  animation: slideLeft 0.3s ease-out;
+}
+
+.animate-slide-right {
+  animation: slideRight 0.3s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .text-heading-xl {
+    @apply text-3xl;
+  }
+
+  .text-heading-lg {
+    @apply text-2xl;
+  }
+
+  .text-heading-md {
+    @apply text-xl;
+  }
+
+  .container-max {
+    @apply px-4;
+  }
+
+  .gap-lg {
+    @apply gap-4;
+  }
+}
+
+/* Backdrop Blur */
+.backdrop-blur-sm {
+  @apply backdrop-blur-sm;
+}
+
+.backdrop-blur {
+  @apply backdrop-blur;
+}
+
+.backdrop-blur-lg {
+  @apply backdrop-blur-lg;
+}
+
+/* Shadows */
+.shadow-sm {
+  @apply shadow-sm;
+}
+
+.shadow {
+  @apply shadow;
+}
+
+.shadow-md {
+  @apply shadow-md;
+}
+
+.shadow-lg {
+  @apply shadow-lg;
+}
+
+.shadow-xl {
+  @apply shadow-xl;
+}
+
+.shadow-glow {
+  @apply shadow-lg;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+/* Border Radius */
+.rounded-xs {
+  @apply rounded-sm;
+}
+
+.rounded-sm {
+  @apply rounded-sm;
+}
+
+.rounded {
+  @apply rounded;
+}
+
+.rounded-md {
+  @apply rounded-md;
+}
+
+.rounded-lg {
+  @apply rounded-lg;
+}
+
+.rounded-xl {
+  @apply rounded-xl;
+}
+
+.rounded-2xl {
+  @apply rounded-2xl;
+}
+
+.rounded-full {
+  @apply rounded-full;
+}
+
+/* Borders */
+.border {
+  @apply border border-slate-700;
+}
+
+.border-t {
+  @apply border-t border-slate-800;
+}
+
+.border-b {
+  @apply border-b border-slate-800;
+}
+
+.border-l {
+  @apply border-l border-slate-800;
+}
+
+.border-r {
+  @apply border-r border-slate-800;
+}
+
+.border-2 {
+  @apply border-2 border-slate-700;
+}
+
+/* Cursor */
+.cursor-pointer {
+  @apply cursor-pointer;
+}
+
+.cursor-default {
+  @apply cursor-default;
+}
+
+.cursor-text {
+  @apply cursor-text;
+}
+
+/* Positioning */
+.sticky {
+  @apply sticky top-0 z-50;
+}
+
+.fixed {
+  @apply fixed;
+}
+
+.absolute {
+  @apply absolute;
+}
+
+.relative {
+  @apply relative;
+}
+
+/* Z-index */
+.z-10 {
+  @apply z-10;
+}
+
+.z-20 {
+  @apply z-20;
+}
+
+.z-30 {
+  @apply z-30;
+}
+
+.z-40 {
+  @apply z-40;
+}
+
+.z-50 {
+  @apply z-50;
+}
+
+/* Special Utility Classes */
+.text-emerald-accent {
+  @apply text-emerald-400 font-semibold;
+}
+
+.text-slate-muted {
+  @apply text-slate-400;
+}
+
+.text-slate-light {
+  @apply text-slate-200;
+}
+
+.bg-slate-elevated {
+  @apply bg-slate-800/80;
+}
+
+.bg-slate-depressed {
+  @apply bg-slate-900/50;
+}
+
+.border-subtle {
+  @apply border border-slate-800/50;
+}
+
+.transition-smooth {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-slate-900;
+}

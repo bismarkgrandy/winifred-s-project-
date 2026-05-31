@@ -1,0 +1,297 @@
+/* Interview Simulator Root */
+.interview-simulator-root {
+  @apply min-h-screen bg-[#0a0f1a] text-white font-sans flex flex-col;
+}
+
+/* Navbar */
+.interview-simulator-navbar {
+  @apply bg-[#0d1a14] border-b border-[#1a2e20] px-6 py-3 flex items-center justify-between sticky top-0 z-50;
+}
+
+.interview-simulator-navbar-left {
+  @apply flex items-center;
+}
+
+.interview-simulator-logo {
+  @apply text-lg font-bold tracking-tight text-white;
+}
+
+.interview-simulator-logo-accent {
+  @apply text-[#22c55e];
+}
+
+.interview-simulator-nav {
+  @apply flex items-center gap-8 text-sm;
+}
+
+.interview-simulator-nav-link {
+  @apply text-gray-400 transition-colors cursor-pointer hover:text-white;
+}
+
+.interview-simulator-nav-active {
+  @apply text-[#22c55e] font-medium border-b-2 border-[#22c55e] pb-0.5;
+}
+
+.interview-simulator-navbar-right {
+  @apply flex items-center gap-3;
+}
+
+.interview-simulator-search {
+  @apply flex items-center bg-[#111827] border border-[#1f2d3d] rounded-lg px-3 py-1.5 gap-2 w-48;
+}
+
+.interview-simulator-search-icon {
+  @apply w-3.5 h-3.5 text-gray-500;
+}
+
+.interview-simulator-search-input {
+  @apply w-full text-sm text-gray-400 placeholder-gray-600 bg-transparent outline-none;
+}
+
+.interview-simulator-navbar-btn {
+  @apply text-gray-400 transition-colors cursor-pointer hover:text-white;
+}
+
+.interview-simulator-user-avatar {
+  @apply w-8 h-8 rounded-full bg-[#22c55e] text-black flex items-center justify-center text-xs font-bold;
+}
+
+/* Main Container */
+.interview-simulator-container {
+  @apply flex flex-1 w-full gap-8 px-6 py-8 mx-auto max-w-7xl;
+}
+
+/* Left Section */
+.interview-simulator-left {
+  @apply flex flex-col items-center justify-center flex-1;
+}
+
+.interview-simulator-role-section {
+  @apply w-full max-w-xs mb-16;
+}
+
+.interview-simulator-role-item {
+  @apply mb-8;
+}
+
+.interview-simulator-role-label {
+  @apply block mb-2 text-xs font-bold tracking-widest text-gray-500 uppercase;
+}
+
+.interview-simulator-role-title {
+  @apply text-2xl font-bold text-white;
+}
+
+/* AI Listening Section */
+.interview-simulator-listening-section {
+  @apply flex flex-col items-center justify-center gap-6;
+}
+
+.interview-simulator-sound-waves {
+  @apply flex items-center justify-center h-24 gap-2;
+}
+
+.interview-simulator-bar {
+  @apply w-2 bg-[#22c55e] rounded-full;
+  animation: wave 0.6s ease-in-out infinite;
+}
+
+.interview-simulator-bar-1 {
+  @apply h-6;
+  animation-delay: 0s;
+}
+
+.interview-simulator-bar-2 {
+  @apply h-10;
+  animation-delay: 0.1s;
+}
+
+.interview-simulator-bar-3 {
+  @apply h-14;
+  animation-delay: 0.2s;
+}
+
+.interview-simulator-bar-4 {
+  @apply h-10;
+  animation-delay: 0.1s;
+}
+
+.interview-simulator-bar-5 {
+  @apply h-6;
+  animation-delay: 0s;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: scaleY(0.5);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.interview-simulator-listening-text {
+  @apply text-lg text-gray-400;
+}
+
+/* Right Section */
+.interview-simulator-right {
+  @apply flex flex-col flex-1;
+}
+
+/* Timer */
+.interview-simulator-timer {
+  @apply flex items-center self-end gap-2 mb-6;
+}
+
+.interview-simulator-timer-dot {
+  @apply w-3 h-3 rounded-full bg-[#22c55e];
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.interview-simulator-timer-text {
+  @apply text-[#22c55e] font-bold text-sm font-mono;
+}
+
+/* Live Transcript */
+.interview-simulator-transcript {
+  @apply bg-[#0d1520] border border-[#1a2535] rounded-xl p-6 flex-1 flex flex-col;
+}
+
+.interview-simulator-transcript-header {
+  @apply flex items-center justify-between mb-6 pb-4 border-b border-[#1a2535];
+}
+
+.interview-simulator-transcript-title {
+  @apply text-xs font-bold tracking-widest text-gray-500 uppercase;
+}
+
+.interview-simulator-transcript-btn {
+  @apply text-gray-400 hover:text-[#22c55e] transition-colors cursor-pointer;
+}
+
+.interview-simulator-transcript-content {
+  @apply flex-1 space-y-4 overflow-y-auto;
+}
+
+.interview-simulator-transcript-item {
+  @apply text-sm;
+}
+
+.interview-simulator-transcript-speaker {
+  @apply block mb-1 text-xs font-bold tracking-widest text-gray-500 uppercase;
+}
+
+.interview-simulator-transcript-text {
+  @apply text-base leading-relaxed text-gray-300;
+}
+
+.interview-simulator-transcript-item-user .interview-simulator-transcript-text {
+  @apply text-[#22c55e];
+}
+
+/* Typing Indicator */
+.interview-simulator-typing {
+  @apply flex gap-1.5 mt-4;
+}
+
+.interview-simulator-typing-dot {
+  @apply w-2 h-2 bg-gray-500 rounded-full;
+  animation: bounce 1.4s ease-in-out infinite;
+}
+
+.interview-simulator-typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.interview-simulator-typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+
+/* Footer Controls */
+.interview-simulator-footer {
+  @apply bg-[#0a0f1a] border-t border-[#1a2535] px-6 py-6 flex items-center justify-between;
+}
+
+.interview-simulator-controls-left {
+  @apply flex items-center gap-4;
+}
+
+.interview-simulator-control-btn {
+  @apply flex items-center gap-2 px-4 py-2.5 bg-[#111827] border border-[#1a2535] rounded-lg text-gray-400 text-sm font-medium hover:text-white hover:border-gray-500 transition-all duration-200 cursor-pointer;
+}
+
+.interview-simulator-control-btn-active {
+  @apply bg-[#1a2535] border-[#22c55e] text-[#22c55e];
+}
+
+.interview-simulator-end-btn {
+  @apply flex items-center gap-2 px-6 py-2.5 bg-transparent border border-red-500/50 rounded-lg text-red-500 text-sm font-bold hover:bg-red-500/10 hover:border-red-500 transition-all duration-200 cursor-pointer;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .interview-simulator-container {
+    @apply flex-col gap-6;
+  }
+
+  .interview-simulator-left {
+    @apply min-h-96;
+  }
+
+  .interview-simulator-right {
+    @apply min-h-96;
+  }
+}
+
+@media (max-width: 768px) {
+  .interview-simulator-container {
+    @apply px-4 py-4;
+  }
+
+  .interview-simulator-role-section {
+    @apply mb-8;
+  }
+
+  .interview-simulator-listening-section {
+    @apply gap-4;
+  }
+
+  .interview-simulator-transcript {
+    @apply p-4;
+  }
+
+  .interview-simulator-footer {
+    @apply flex-col gap-4 px-4;
+  }
+
+  .interview-simulator-controls-left {
+    @apply justify-between w-full;
+  }
+
+  .interview-simulator-end-btn {
+    @apply justify-center w-full;
+  }
+}
