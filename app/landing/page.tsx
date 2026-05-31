@@ -1,6 +1,7 @@
 'use client';
 
-import { ArrowRight, BarChart3, Zap, TrendingUp } from 'lucide-react';
+import "../components/styles/landing page.css";
+import { ArrowRight, Code, Zap, TrendingUp } from 'lucide-react';
 
 export default function LandingPage() {
   return (
@@ -65,7 +66,7 @@ export default function LandingPage() {
           {/* Feature 1 */}
           <div className="bg-gray-900 border border-gray-800 rounded-xl p-8 text-left hover:border-gray-700 transition-colors">
             <div className="w-12 h-12 bg-teal-600/20 rounded-lg flex items-center justify-center mb-6">
-              <BarChart3 className="w-6 h-6 text-teal-400" />
+              <Code className="w-6 h-6 text-teal-400" />
             </div>
             <h4 className="text-xl font-bold mb-3">Select Your Path</h4>
             <p className="text-gray-400 mb-6">

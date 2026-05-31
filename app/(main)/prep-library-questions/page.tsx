@@ -1,3 +1,6 @@
+'use client';
+
+import "../../components/styles/prep-library questions.css";
 import React, { useState } from 'react';
 import { Bell, User, Play, CheckCircle, Clock, TrendingUp } from 'lucide-react';
 

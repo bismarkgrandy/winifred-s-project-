@@ -1,13 +1,12 @@
-import "./FeedbackReport.css";
+import "../../components/styles/Feedback report.css";
 import {
   Bell,
-  HelpCircle,
-  Download,
-  Share2,
+  CircleHelp,
+  ArrowRight,
+  ArrowUpDown,
   CheckCircle2,
-  AlertTriangle,
-  ChevronRight,
-  Bot,
+  Shield,
+  Sparkles,
   User,
 } from "lucide-react";
 
@@ -27,7 +26,7 @@ export default function FeedbackReport() {
           </div>
           <div className="nav-right">
             <Bell className="icon" />
-            <HelpCircle className="icon" />
+            <CircleHelp className="icon" />
             <div className="avatar">U</div>
           </div>
         </div>
@@ -50,10 +49,10 @@ export default function FeedbackReport() {
             </div>
             <div className="header-right">
               <button className="btn btn-outline">
-                <Download size={18} /> Download PDF
+                <ArrowRight size={18} /> Download PDF
               </button>
               <button className="btn btn-primary">
-                <Share2 size={18} /> Share Result
+                <ArrowUpDown size={18} /> Share Result
               </button>
             </div>
           </div>
@@ -145,7 +144,7 @@ export default function FeedbackReport() {
           {/* Areas for Growth */}
           <div className="card">
             <div className="card-header">
-              <AlertTriangle size={20} className="header-icon growth" />
+              <Shield size={20} className="header-icon growth" />
               <h2 className="card-title">Areas for Growth</h2>
             </div>
             <div className="items-list">
@@ -207,7 +206,7 @@ export default function FeedbackReport() {
             {/* AI Message */}
             <div className="transcript-message ai-message">
               <div className="message-avatar ai">
-                <Bot size={18} />
+                <Sparkles size={18} />
               </div>
               <div className="message-content">
                 <div className="message-name">Interviewer (AI)</div>
@@ -229,7 +228,7 @@ export default function FeedbackReport() {
             {/* AI Message */}
             <div className="transcript-message ai-message">
               <div className="message-avatar ai">
-                <Bot size={18} />
+                <Sparkles size={18} />
               </div>
               <div className="message-content">
                 <div className="message-name">Interviewer (AI)</div>
@@ -253,7 +252,7 @@ export default function FeedbackReport() {
         {/* CTA Section */}
         <div className="cta-section">
           <button className="btn btn-outline-large">Retake Interview</button>
-          <button className="btn btn-primary-large">Start New Interview <ChevronRight size={18} /></button>
+          <button className="btn btn-primary-large">Start New Interview <ArrowRight size={18} /></button>
         </div>
       </div>
 

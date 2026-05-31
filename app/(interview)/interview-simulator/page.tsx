@@ -1,5 +1,6 @@
 'use client';
 
+import "../../components/styles/interview.simulator.css";
 import { Bell, HelpCircle, Search, Mic, Volume2, Phone, Clock, Copy } from 'lucide-react';
 import { useState, useEffect } from 'react';
 

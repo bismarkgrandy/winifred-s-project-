@@ -1,5 +1,6 @@
 "use client";
 
+import "../../components/styles/sign-in.css";
 import { useState } from "react";
 import { ArrowRight, AtSign, Lock, GraduationCap } from "lucide-react";
 

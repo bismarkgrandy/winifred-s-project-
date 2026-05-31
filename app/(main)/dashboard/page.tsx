@@ -1,6 +1,7 @@
 'use client';
 
-import { Bell, HelpCircle, Search, Clock, Zap, Trophy, Code2, Shield, Monitor, Building2, Calendar, ArrowRight, Plus, SlidersHorizontal, ArrowUpDown, TrendingUp, ChevronRight, ChevronLeft } from 'lucide-react';
+import "../../components/styles/dashboard.css";
+import { Bell, CircleHelp, Search, Clock, Zap, Trophy, Code, Shield, Monitor, Building2, Calendar, ArrowRight, Plus, SlidersHorizontal, ArrowUpDown, TrendingUp } from 'lucide-react';
 
 export default function Dashboard() {
   return (
@@ -24,7 +25,7 @@ export default function Dashboard() {
             <Bell className="w-5 h-5" />
           </button>
           <button className="dashboard-navbar-icon-btn">
-            <HelpCircle className="w-5 h-5" />
+            <CircleHelp className="w-5 h-5" />
           </button>
           <div className="dashboard-user-avatar">U</div>
         </div>
@@ -148,7 +149,7 @@ export default function Dashboard() {
           <div className="dashboard-interview-card">
             <div className="dashboard-card-header">
               <div className="dashboard-card-icon dashboard-card-icon-green">
-                <Code2 className="w-5 h-5" />
+                <Code className="w-5 h-5" />
               </div>
               <div className="dashboard-card-score">
                 <span className="dashboard-card-score-label">SCORE</span>

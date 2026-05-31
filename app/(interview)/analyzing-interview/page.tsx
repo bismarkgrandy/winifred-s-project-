@@ -1,5 +1,6 @@
 'use client';
 
+import "../../components/styles/analyzing interview.css";
 import { Bell, Settings, Sparkles, CheckCircle2, Lightbulb } from 'lucide-react';
 import { useState, useEffect } from 'react';
 

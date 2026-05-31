@@ -1,5 +1,6 @@
 'use client';
 
+import "../../components/styles/interview setup.css";
 import { ChevronDown, Monitor, Briefcase, X } from 'lucide-react';
 import React, { useState } from 'react'; // Explicitly import React for types like React.KeyboardEvent
 export default function InterviewSetup() {

@@ -1,5 +1,6 @@
 "use client";
 
+import "../../components/styles/sign-up.css";
 import { useState } from "react";
 import { GraduationCap, User, Mail, Lock } from "lucide-react";
 
